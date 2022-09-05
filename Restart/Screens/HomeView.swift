@@ -12,14 +12,10 @@ struct HomeView: View {
     @AppStorage("Onboarding") var isOnboardingViewActive: Bool = false
     
     var body: some View {
-        
         VStack(spacing: 20){
-            
             //MARK: header
             Spacer()
-            
             ZStack {
-                
                 CircleGroupView(ShapeColor: .gray, ShapeOpacity: 0.1)
                 
                 Image("character-2")
@@ -27,7 +23,6 @@ struct HomeView: View {
                     .scaledToFit()
                 .padding()
             }
-            
             //MARK: center
             Text("The time that leads to mastary is dependent on the intensity of our focus.")
                 .font(.title3)
@@ -37,12 +32,10 @@ struct HomeView: View {
                 .padding()
         
             //MARK: footer
-            
             Spacer()
                 Button {
                     isOnboardingViewActive = true
                 } label: {
-                    
                     Image(systemName: "arrow.triangle.2.circlepath.circle.fill")
                         .imageScale(.large)
                     Text("Restart")
@@ -52,11 +45,9 @@ struct HomeView: View {
                 .buttonStyle(.borderedProminent)
                 .buttonBorderShape(.capsule)
                 .controlSize(.large)
-                
             }//: footer
     }
 }
-
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
