@@ -4,8 +4,6 @@
 <dict>
 	<key>UILaunchScreen</key>
 	<dict>
-		<key>UIImageName</key>
-		<string>Logo</string>
 		<key>UIColorName</key>
 		<string>Blue</string>
 		<key>UILaunchScreen</key>

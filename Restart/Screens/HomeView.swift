@@ -11,6 +11,8 @@ struct HomeView: View {
     
     @AppStorage("Onboarding") var isOnboardingViewActive: Bool = false
     
+    @State private var isAnimating: Bool = false
+    
     var body: some View {
         VStack(spacing: 20){
             //MARK: header
@@ -21,7 +23,13 @@ struct HomeView: View {
                 Image("character-2")
                     .resizable()
                     .scaledToFit()
-                .padding()
+                    .padding()
+                    .offset(y: isAnimating ? 30 : -30)
+                    .animation(
+                        .easeInOut(duration: 4.5)
+                        .repeatForever()
+                        ,value: isAnimating
+                    )
             }
             //MARK: center
             Text("The time that leads to mastary is dependent on the intensity of our focus.")
@@ -34,7 +42,10 @@ struct HomeView: View {
             //MARK: footer
             Spacer()
                 Button {
-                    isOnboardingViewActive = true
+                    playSound(sound: "success", type: "m4a")
+                    withAnimation(Animation.easeOut(duration: 0.5)){
+                        isOnboardingViewActive = true
+                    }
                 } label: {
                     Image(systemName: "arrow.triangle.2.circlepath.circle.fill")
                         .imageScale(.large)
@@ -45,7 +56,13 @@ struct HomeView: View {
                 .buttonStyle(.borderedProminent)
                 .buttonBorderShape(.capsule)
                 .controlSize(.large)
+            
             }//: footer
+        .onAppear{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                isAnimating = true
+            })
+        }
     }
 }
 struct HomeView_Previews: PreviewProvider {
