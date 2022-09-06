@@ -15,6 +15,8 @@
 		01855FF428C594FD0082F0D8 /* success.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 01855FF228C594FD0082F0D8 /* success.m4a */; };
 		01855FFB28C5F0B70082F0D8 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01855FFA28C5F0B70082F0D8 /* OnboardingView.swift */; };
 		01855FFD28C5F0C40082F0D8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01855FFC28C5F0C40082F0D8 /* HomeView.swift */; };
+		01855FFF28C6058E0082F0D8 /* CircleGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01855FFE28C6058E0082F0D8 /* CircleGroupView.swift */; };
+		01C5508B28C6F6B900FBC1AD /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C5508A28C6F6B900FBC1AD /* AudioPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		01855FF928C598FF0082F0D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		01855FFA28C5F0B70082F0D8 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		01855FFC28C5F0C40082F0D8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		01855FFE28C6058E0082F0D8 /* CircleGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleGroupView.swift; sourceTree = "<group>"; };
+		01C5508A28C6F6B900FBC1AD /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +69,8 @@
 				01855FF828C596C30082F0D8 /* Utilities */,
 				01855FF528C595750082F0D8 /* Sounds */,
 				01855FE728C594760082F0D8 /* Assets.xcassets */,
-				01855FF728C596AE0082F0D8 /* Views */,
 				01855FF628C596930082F0D8 /* Screens */,
+				01855FF728C596AE0082F0D8 /* Views */,
 				01855FE928C594770082F0D8 /* Preview Content */,
 			);
 			path = Restart;
@@ -102,6 +106,7 @@
 		01855FF728C596AE0082F0D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				01855FFE28C6058E0082F0D8 /* CircleGroupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 		01855FF828C596C30082F0D8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				01C5508A28C6F6B900FBC1AD /* AudioPlayer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -185,10 +191,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01855FFF28C6058E0082F0D8 /* CircleGroupView.swift in Sources */,
 				01855FFB28C5F0B70082F0D8 /* OnboardingView.swift in Sources */,
 				01855FFD28C5F0C40082F0D8 /* HomeView.swift in Sources */,
 				01855FE628C594750082F0D8 /* ContentView.swift in Sources */,
 				01855FE428C594750082F0D8 /* RestartApp.swift in Sources */,
+				01C5508B28C6F6B900FBC1AD /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
